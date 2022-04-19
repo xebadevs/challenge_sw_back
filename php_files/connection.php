@@ -16,20 +16,9 @@ class Connection{
             $this->connect = 'Connection error';
             echo 'ERROR: ' . $e->getMessage();
         }
-
-    $connect = new Connection();
     }
-}
 
-//
-//
-//function connect(){
-//    try{
-//        $database = new PDO(
-//            "mysql:host=" . HOST . ";dbname=" . DBNAME, DBUSER, DBPASSWORD
-//        );
-//    }catch (PDOException $error){
-//        echo $error->getMessage();
-//    }
-//    return $database;
-//}
+    public function connect(){
+            return $this->connect;
+        }
+}
