@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 18-04-2022 a las 03:28:15
+-- Tiempo de generación: 19-04-2022 a las 20:56:08
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -42,7 +42,18 @@ CREATE TABLE `attributes` (
 --
 
 INSERT INTO `attributes` (`id_attribute`, `size`, `weight`, `height`, `width`, `length`, `fk_id_product`) VALUES
-(2, 700, NULL, NULL, NULL, NULL, 5);
+(2, 700, NULL, NULL, NULL, NULL, 5),
+(5, 700, NULL, NULL, NULL, NULL, 6),
+(6, 700, NULL, NULL, NULL, NULL, 7),
+(7, 700, NULL, NULL, NULL, NULL, 8),
+(8, NULL, 2, NULL, NULL, NULL, 9),
+(9, NULL, 2, NULL, NULL, NULL, 10),
+(10, NULL, 2, NULL, NULL, NULL, 11),
+(11, NULL, 2, NULL, NULL, NULL, 12),
+(12, NULL, NULL, 24, 45, 15, 13),
+(13, NULL, NULL, 24, 45, 15, 14),
+(14, NULL, NULL, 24, 45, 15, 15),
+(15, NULL, NULL, 24, 45, 15, 16);
 
 -- --------------------------------------------------------
 
@@ -62,7 +73,18 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id_prod`, `sku`, `name`, `price`) VALUES
-(5, 'JVC200123', 'Acme DISC', 1);
+(5, 'JVC200123', 'Acme DISC', 1),
+(6, 'JVC200123', 'Acme DISC', 1),
+(7, 'JVC200123', 'Acme DISC', 1),
+(8, 'JVC200123', 'Acme DISC', 1),
+(9, 'GGWP0007', 'War and Peace', 20),
+(10, 'GGWP0007', 'War and Peace', 20),
+(11, 'GGWP0007', 'War and Peace', 20),
+(12, 'GGWP0007', 'War and Peace', 20),
+(13, 'TR120555', 'Choir', 40),
+(14, 'TR120555', 'Choir', 40),
+(15, 'TR120555', 'Choir', 40),
+(16, 'TR120555', 'Choir', 40);
 
 --
 -- Índices para tablas volcadas
@@ -89,13 +111,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de la tabla `attributes`
 --
 ALTER TABLE `attributes`
-  MODIFY `id_attribute` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_attribute` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_prod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_prod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas
