@@ -10,4 +10,16 @@ require_once('products.php');
 
 $db = DB::getConnection();
 
-print_r($db);
+var_dump($db);
+
+echo '<hr>';
+
+$sql = 'SELECT * FROM products';
+$stmt = $db->prepare($sql);
+$stmt->execute();
+
+while ($producto = $stmt->fetch()) {
+    echo 'SKU: ' . $producto['sku'] . '<br>';
+    echo 'Name: ' . $producto['name'] . '<br>';
+    echo 'Price: ' . $producto['price'] . '<br>';
+}
