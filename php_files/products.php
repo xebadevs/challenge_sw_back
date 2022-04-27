@@ -1,6 +1,6 @@
 <?php
 
-require_once('connection.php');
+require_once('DB.php');
 
 class Products{
     private $strSku;
